@@ -209,7 +209,7 @@ public class ClassRoutineActivity extends AppCompatActivity {
         openCellDialog(day, cells, leader, tappedIndex, combinedMode, activeLab, hasCourse);
     }
 
-     // COUNT HOW MANY SLOTS BELONG TO A GROUP
+
 
     private int countGroupMembers(int leader) {
 
@@ -223,7 +223,7 @@ public class ClassRoutineActivity extends AppCompatActivity {
         return count;
     }
 
-    // WHICH CELL IN A LAB GROUP SHOWS THE COURSE TEXT
+
        private int getLabDisplayIndex(int leader) {
 
         if (leader == 0) {
@@ -419,7 +419,7 @@ public class ClassRoutineActivity extends AppCompatActivity {
         resetCell(cells[index]);
     }
 
-     // CLEAR A WHOLE GROUP (ALL SLOTS OF A MERGED LAB)
+     // CLEAR A WHOLE GROUP
      private void clearGroup(String day, TextView[] cells, int leader) {
 
         for (int i = 0; i < GROUP_LEADER.length; i++) {
@@ -431,7 +431,7 @@ public class ClassRoutineActivity extends AppCompatActivity {
         }
     }
 
-    // RESET ONE CELL TO "NO CLASS"
+    // RESET ONE CELL TO NO CLASS
      private void resetCell(TextView cell) {
 
         cell.setText("No Class");
@@ -507,7 +507,7 @@ public class ClassRoutineActivity extends AppCompatActivity {
         }
     }
 
-     // GET SLOT INDEX (0-8) FOR A GIVEN TIME LABEL
+     // GET SLOT INDEX FOR A GIVEN TIME
        private int indexOfTime(String time) {
 
         for (int i = 0; i < TIMES.length; i++) {
@@ -538,7 +538,7 @@ public class ClassRoutineActivity extends AppCompatActivity {
         cursor.close();
         return "";
     }
-    // GET COURSE TYPE (CLASS OR LAB) BY CODE
+    // GET COURSE TYPE  BY CODE
        private String getCourseType(String courseCode) {
         Cursor cursor = databaseHelper.getCoursesBySemester(selectedSemester);
         while (cursor.moveToNext()) {

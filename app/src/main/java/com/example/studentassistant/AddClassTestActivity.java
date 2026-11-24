@@ -78,9 +78,9 @@ public class AddClassTestActivity extends AppCompatActivity {
             return insets;
         });
 
-        // ---------------------------------------------------------
-        // GET SELECTED SEMESTER
-        // ---------------------------------------------------------
+
+        // semester selection
+
 
         SharedPreferences preferences =
                 getSharedPreferences("StudentAssistant", MODE_PRIVATE);
@@ -88,15 +88,13 @@ public class AddClassTestActivity extends AppCompatActivity {
         selectedSemester =
                 preferences.getString("semester", "Select Semester");
 
-        // ---------------------------------------------------------
-        // DATABASE
-        // ---------------------------------------------------------
+
+        // DATABASE!!!
+
 
         databaseHelper = new DatabaseHelper(this);
 
-        // ---------------------------------------------------------
-        // FIND VIEWS
-        // ---------------------------------------------------------
+
 
         spinnerTestCourse = findViewById(R.id.spinnerTestCourse);
         tvTestDatePicker = findViewById(R.id.tvTestDatePicker);
@@ -105,36 +103,28 @@ public class AddClassTestActivity extends AppCompatActivity {
         tvTestAttachmentStatus = findViewById(R.id.tvTestAttachmentStatus);
         btnSaveClassTest = findViewById(R.id.btnSaveClassTest);
 
-        // ---------------------------------------------------------
+
         // LOAD COURSES INTO SPINNER
-        // ---------------------------------------------------------
 
         loadCourseSpinner();
 
-        // ---------------------------------------------------------
         // TEST DATE PICKER
-        // ---------------------------------------------------------
 
         tvTestDatePicker.setOnClickListener(v -> showDatePicker());
 
-        // ---------------------------------------------------------
         // ATTACHMENT PICKER
-        // ---------------------------------------------------------
+
 
         btnAddTestAttachment.setOnClickListener(v ->
                 attachmentPickerLauncher.launch(new String[]{"*/*"})
         );
 
-        // ---------------------------------------------------------
         // SAVE
-        // ---------------------------------------------------------
 
         btnSaveClassTest.setOnClickListener(v -> saveClassTest());
     }
 
-    // =========================================================
-    // LOAD COURSES (CLASS + LAB) FOR THE SELECTED SEMESTER
-    // =========================================================
+    // course load for each semester
 
     private void loadCourseSpinner() {
 
@@ -175,9 +165,7 @@ public class AddClassTestActivity extends AppCompatActivity {
         spinnerTestCourse.setAdapter(adapter);
     }
 
-    // =========================================================
-    // SHOW DATE PICKER (YEARS 2020 TO 2030)
-    // =========================================================
+   //date show
 
     private void showDatePicker() {
 
@@ -217,9 +205,7 @@ public class AddClassTestActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    // =========================================================
     // GET DISPLAY FILE NAME FROM A CONTENT URI
-    // =========================================================
 
     private String getFileName(Uri uri) {
 
@@ -238,7 +224,7 @@ public class AddClassTestActivity extends AppCompatActivity {
             }
 
         } catch (Exception e) {
-            // Fall back below if this fails
+            // Fall back
         }
 
         if (result == null) {
@@ -252,9 +238,7 @@ public class AddClassTestActivity extends AppCompatActivity {
         return result;
     }
 
-    // =========================================================
-    // VALIDATE AND SAVE THE CLASS TEST
-    // =========================================================
+    //  SAVE THE CLASS TEST
 
     private void saveClassTest() {
 

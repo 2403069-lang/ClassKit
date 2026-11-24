@@ -78,9 +78,9 @@ public class addassignment extends AppCompatActivity {
             return insets;
         });
 
-        // ---------------------------------------------------------
+
         // GET SELECTED SEMESTER
-        // ---------------------------------------------------------
+
 
         SharedPreferences preferences =
                 getSharedPreferences("StudentAssistant", MODE_PRIVATE);
@@ -88,15 +88,14 @@ public class addassignment extends AppCompatActivity {
         selectedSemester =
                 preferences.getString("semester", "Select Semester");
 
-        // ---------------------------------------------------------
+
         // DATABASE
-        // ---------------------------------------------------------
+
 
         databaseHelper = new DatabaseHelper(this);
 
-        // ---------------------------------------------------------
+
         // FIND VIEWS
-        // ---------------------------------------------------------
 
         spinnerCourse = findViewById(R.id.spinnerCourse);
         tvDueDate = findViewById(R.id.tvDueDate);
@@ -105,36 +104,33 @@ public class addassignment extends AppCompatActivity {
         tvAttachmentStatus = findViewById(R.id.tvAttachmentStatus);
         btnSaveAssignment = findViewById(R.id.btnSaveAssignment);
 
-        // ---------------------------------------------------------
+
         // LOAD COURSES INTO SPINNER
-        // ---------------------------------------------------------
+
 
         loadCourseSpinner();
 
-        // ---------------------------------------------------------
+
         // DUE DATE PICKER
-        // ---------------------------------------------------------
 
         tvDueDate.setOnClickListener(v -> showDatePicker());
 
-        // ---------------------------------------------------------
+
         // ATTACHMENT PICKER
-        // ---------------------------------------------------------
 
         btnAddAttachment.setOnClickListener(v ->
                 attachmentPickerLauncher.launch(new String[]{"*/*"})
         );
 
-        // ---------------------------------------------------------
+
         // SAVE
-        // ---------------------------------------------------------
+
 
         btnSaveAssignment.setOnClickListener(v -> saveAssignment());
     }
 
-    // =========================================================
+
     // LOAD COURSES (CLASS + LAB) FOR THE SELECTED SEMESTER
-    // =========================================================
 
     private void loadCourseSpinner() {
 
@@ -175,9 +171,9 @@ public class addassignment extends AppCompatActivity {
         spinnerCourse.setAdapter(adapter);
     }
 
-    // =========================================================
-    // SHOW DATE PICKER (YEARS 2020 TO 2030)
-    // =========================================================
+
+    // SHOW DATE
+
 
     private void showDatePicker() {
 
@@ -217,9 +213,9 @@ public class addassignment extends AppCompatActivity {
         dialog.show();
     }
 
-    // =========================================================
-    // GET DISPLAY FILE NAME FROM A CONTENT URI
-    // =========================================================
+
+    // GET DISPLAY FILE NAME
+
 
     private String getFileName(Uri uri) {
 
@@ -252,9 +248,9 @@ public class addassignment extends AppCompatActivity {
         return result;
     }
 
-    // =========================================================
+
     // VALIDATE AND SAVE THE ASSIGNMENT
-    // =========================================================
+
 
     private void saveAssignment() {
 

@@ -49,7 +49,7 @@
                     android:singleLine="true" />
 
 
-                <!-- ================= TABLE ================= -->
+               // TABLE
 
                 <TableLayout
                     android:id="@+id/classRoutineTable"
@@ -57,8 +57,7 @@
                     android:layout_height="wrap_content">
 
 
-                    <!-- ================= HEADER ================= -->
-
+                    // HEADER
                     <TableRow>
 
                         <TextView
@@ -101,7 +100,7 @@
                             android:singleLine="true"
                             android:background="#DDDDDD" />
 
-                        <!-- BREAK -->
+                        // BREAK
 
                         <TextView
                             android:layout_width="100dp"
@@ -142,7 +141,7 @@
                             android:singleLine="true"
                             android:background="#DDDDDD" />
 
-                        <!-- LUNCH -->
+                        //LUNCH
 
                         <TextView
                             android:layout_width="100dp"
@@ -186,7 +185,7 @@
                     </TableRow>
 
 
-                    <!-- ================= SATURDAY ================= -->
+                    //saturday
 
                     <TableRow>
 
@@ -291,7 +290,7 @@
                     </TableRow>
 
 
-                    <!-- ================= SUNDAY ================= -->
+                    //sunday
 
                     <TableRow>
 
@@ -396,7 +395,7 @@
                     </TableRow>
 
 
-                    <!-- ================= MONDAY ================= -->
+                    //monday
 
                     <TableRow>
 
@@ -501,7 +500,7 @@
                     </TableRow>
 
 
-                    <!-- ================= TUESDAY ================= -->
+                    //tuesday
 
                     <TableRow>
 
@@ -606,7 +605,7 @@
                     </TableRow>
 
 
-                    <!-- ================= WEDNESDAY ================= -->
+                    //wednesday
 
                     <TableRow>
 
@@ -718,7 +717,7 @@
 
     </HorizontalScrollView>
 
-    <!-- ================= SAVE BUTTON ================= -->
+    //save
 
     <Button
         android:id="@+id/btnSaveRoutine"

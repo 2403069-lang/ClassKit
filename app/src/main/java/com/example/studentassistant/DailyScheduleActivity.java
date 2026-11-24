@@ -82,9 +82,9 @@ public class DailyScheduleActivity extends AppCompatActivity {
         loadUpcomingReminders();
     }
 
-    // =========================================================
-    // LOAD CLASSES FOR THE TARGET DAY (TODAY OR TOMORROW)
-    // =========================================================
+
+    // LOAD CLASSES FOR THE DAY
+
 
     private void loadDaySchedule(int dayOffset) {
 
@@ -93,8 +93,7 @@ public class DailyScheduleActivity extends AppCompatActivity {
         Calendar targetDay = Calendar.getInstance();
         targetDay.add(Calendar.DAY_OF_YEAR, dayOffset);
 
-        // Locale.ENGLISH on purpose: our stored day names ("Saturday" etc.)
-        // are always in English regardless of the phone's language setting.
+
         String dayName = new SimpleDateFormat("EEEE", Locale.ENGLISH)
                 .format(targetDay.getTime());
 
@@ -261,9 +260,9 @@ public class DailyScheduleActivity extends AppCompatActivity {
         return "";
     }
 
-    // =========================================================
-    // LOAD ASSIGNMENTS / CLASS TESTS DUE WITHIN THE NEXT 2 DAYS
-    // =========================================================
+
+    // LOAD ASSIGNMENTS or CLASS TESTS DUE WITHIN THE NEXT 2 DAYS
+
 
     private void loadUpcomingReminders() {
 

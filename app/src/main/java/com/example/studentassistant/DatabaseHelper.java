@@ -747,9 +747,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         );
     }
 
-    // ---------------------------------------------------------
+
     // GET LAB COURSES
-    // ---------------------------------------------------------
 
     public Cursor getLabCourses(String semester) {
 
@@ -820,9 +819,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         );
     }
 
-    // ---------------------------------------------------------
+
     // GET ROUTINE FOR A SEMESTER, FILTERED TO ONE DAY
-    // ---------------------------------------------------------
+
 
     public Cursor getRoutineForDay(String semester, String day) {
 

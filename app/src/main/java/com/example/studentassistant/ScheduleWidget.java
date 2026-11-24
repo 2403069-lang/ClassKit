@@ -41,7 +41,7 @@ public class ScheduleWidget extends AppWidgetProvider {
             6, 6, 6
     };
 
-    // Show at most this many upcoming items (the widget is small)
+    // Show at most this many upcoming items
     private static final int MAX_UPCOMING = 3;
 
     // Called by Android when the widget is added or its timer fires
@@ -113,9 +113,9 @@ public class ScheduleWidget extends AppWidgetProvider {
         manager.updateAppWidget(widgetId, views);
     }
 
-    // =========================================================
-    // WIDGET TEXT = TODAY'S CLASSES + UPCOMING REMINDERS
-    // =========================================================
+
+    // WIDGET TEXT = TODAYS CLASSES and UPCOMING REMINDERS
+
 
     private static String buildBody(Context context, String semester, String dayName) {
 
@@ -132,9 +132,9 @@ public class ScheduleWidget extends AppWidgetProvider {
         return sb.toString();
     }
 
-    // ---------------------------------------------------------
-    // PART 1: TODAY'S CLASSES (labs merged into one line)
-    // ---------------------------------------------------------
+
+    // PART 1: TODAYS CLASSES labs merged into one line
+
 
     private static String buildClasses(Context context, String semester, String dayName) {
 
@@ -216,9 +216,9 @@ public class ScheduleWidget extends AppWidgetProvider {
         return sb.toString().trim();
     }
 
-    // ---------------------------------------------------------
-    // PART 2: ASSIGNMENTS / CLASS TESTS DUE WITHIN 2 DAYS
-    // ---------------------------------------------------------
+
+    // PART 2: ASSIGNMENTS and CLASS TESTS DUE WITHIN 2 DAYS
+
 
     private static String buildUpcoming(Context context) {
 
@@ -353,9 +353,8 @@ public class ScheduleWidget extends AppWidgetProvider {
         }
     }
 
-    // ---------------------------------------------------------
+
     // SMALL HELPERS
-    // ---------------------------------------------------------
 
     private static void addLine(StringBuilder sb, String start, String end, String code) {
         sb.append(start).append(" - ").append(end)

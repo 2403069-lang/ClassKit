@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Search icon -->
+
 
     <TextView
         android:id="@+id/tvSearchIcon"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="@id/tvClassTestTitle"
         app:layout_constraintBottom_toBottomOf="@id/tvClassTestTitle" />
 
-    <!-- Search box (hidden until the icon is tapped) -->
+
 
     <EditText
         android:id="@+id/etSearch"

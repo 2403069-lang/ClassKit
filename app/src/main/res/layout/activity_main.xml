@@ -7,9 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- ========================= -->
-    <!-- MAIN DASHBOARD             -->
-    <!-- ========================= -->
+    // MAIN DASHBOARD
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -25,7 +24,7 @@
             android:paddingTop="20dp"
             android:paddingBottom="30dp">
 
-            <!-- Menu -->
+           // Menu
             <TextView
                 android:id="@+id/tvMenu"
                 android:layout_width="wrap_content"
@@ -35,7 +34,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <!-- Greeting -->
+            // Greeting
             <TextView
                 android:id="@+id/tvGreeting"
                 android:layout_width="wrap_content"
@@ -47,7 +46,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tvMenu"
                 android:layout_marginTop="35dp" />
 
-            <!-- Day name -->
+            //Day name
             <TextView
                 android:id="@+id/tvDate"
                 android:layout_width="wrap_content"
@@ -60,7 +59,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tvGreeting"
                 android:layout_marginTop="5dp" />
 
-            <!-- Class Routine -->
+            // Class Routine
             <Button
                 android:id="@+id/btnClassRoutine"
                 android:layout_width="0dp"
@@ -76,7 +75,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tvDate"
                 android:layout_marginTop="25dp" />
 
-            <!-- Today's Schedule -->
+            // Today's Schedule
             <Button
                 android:id="@+id/btnTodaySchedule"
                 android:layout_width="0dp"
@@ -93,7 +92,7 @@
                 android:layout_marginTop="14dp"
                 android:layout_marginEnd="6dp" />
 
-            <!-- Tomorrow's Schedule -->
+            // Tomorrow's Schedule
             <Button
                 android:id="@+id/btnTomorrowSchedule"
                 android:layout_width="0dp"
@@ -109,7 +108,7 @@
                 app:layout_constraintTop_toTopOf="@id/btnTodaySchedule"
                 android:layout_marginStart="6dp" />
 
-            <!-- Due Assignment -->
+            // Due Assignment
             <Button
                 android:id="@+id/btnAssignment"
                 android:layout_width="0dp"
@@ -125,7 +124,7 @@
                 app:layout_constraintTop_toBottomOf="@id/btnTodaySchedule"
                 android:layout_marginTop="14dp" />
 
-            <!--  Class Test -->
+            //  Class Test
             <Button
                 android:id="@+id/btnClassTest"
                 android:layout_width="0dp"

@@ -64,15 +64,13 @@ public class ClassTestActivity extends AppCompatActivity {
 
         });
 
-        // ---------------------------------------------------------
-        // SEARCH ICON: SHOW / HIDE THE SEARCH BOX
-        // ---------------------------------------------------------
+        // search icon on off kora
 
         tvSearchIcon.setOnClickListener(v -> toggleSearchBox());
 
-        // ---------------------------------------------------------
-        // SEARCH BOX: FILTER THE LIST AS THE USER TYPES
-        // ---------------------------------------------------------
+
+        // SEARCH BOX
+
 
         etSearch.addTextChangedListener(new TextWatcher() {
 
@@ -93,7 +91,7 @@ public class ClassTestActivity extends AppCompatActivity {
             }
         });
 
-        // Keyboard "search" key just closes the keyboard
+        // Keyboard er search key
         etSearch.setOnEditorActionListener((v, actionId, event) -> {
 
             if (actionId == EditorInfo.IME_ACTION_SEARCH) {
@@ -110,13 +108,11 @@ public class ClassTestActivity extends AppCompatActivity {
         super.onResume();
 
         // Reload every time this screen becomes visible,
-        // so a newly added or deleted test always shows up.
         loadClassTests();
     }
 
-    // =========================================================
-    // SHOW OR HIDE THE SEARCH BOX
-    // =========================================================
+
+    // SHOW and HIDE THE SEARCH BOX
 
     private void toggleSearchBox() {
 
@@ -157,10 +153,9 @@ public class ClassTestActivity extends AppCompatActivity {
         }
     }
 
-    // =========================================================
-    // LOAD CLASS TESTS FROM DATABASE AND BUILD CARDS
-    // (ONLY THE ONES THAT MATCH THE SEARCH)
-    // =========================================================
+
+    // class test loading from database AND BUILD CARDS(those who matches)
+
 
     private void loadClassTests() {
 
@@ -202,7 +197,7 @@ public class ClassTestActivity extends AppCompatActivity {
 
         cursor.close();
 
-        // Empty-state message
+        // Emptystate message
         if (totalCount == 0) {
 
             tvNoClassTests.setText("No class tests yet.\nTap + to add one.");
@@ -219,10 +214,6 @@ public class ClassTestActivity extends AppCompatActivity {
         }
     }
 
-    // =========================================================
-    // DOES THIS CLASS TEST MATCH WHAT THE USER TYPED?
-    // Every word typed must appear somewhere in the card text.
-    // =========================================================
 
     private boolean matchesSearch(
             String courseCode,
@@ -254,9 +245,9 @@ public class ClassTestActivity extends AppCompatActivity {
         return true;
     }
 
-    // =========================================================
-    // CREATE AND ADD ONE CLASS TEST CARD VIEW
-    // =========================================================
+
+    // CREATE, ADD ONE CLASS TEST  VIEW
+
 
     private void addClassTestCard(
             long id,
@@ -299,9 +290,8 @@ public class ClassTestActivity extends AppCompatActivity {
         llClassTestList.addView(card);
     }
 
-    // =========================================================
-    // CONVERT STORED "yyyy-MM-dd" INTO A READABLE DATE
-    // =========================================================
+
+    // date conversion
 
     private String formatDate(String rawDate) {
 
@@ -323,9 +313,8 @@ public class ClassTestActivity extends AppCompatActivity {
         }
     }
 
-    // =========================================================
-    // OPEN AN ATTACHED FILE / IMAGE
-    // =========================================================
+
+    // file open
 
     private void openAttachment(String uriString) {
 
@@ -349,9 +338,7 @@ public class ClassTestActivity extends AppCompatActivity {
         }
     }
 
-    // =========================================================
-    // CONFIRM AND DELETE A CLASS TEST
-    // =========================================================
+    // delete
 
     private void confirmDelete(long id) {
 

@@ -64,15 +64,15 @@ public class AssignmentActivity extends AppCompatActivity {
 
         });
 
-        // ---------------------------------------------------------
-        // SEARCH ICON: SHOW / HIDE THE SEARCH BOX
-        // ---------------------------------------------------------
+
+        // SEARCH ICON
+
 
         tvSearchIcon.setOnClickListener(v -> toggleSearchBox());
 
-        // ---------------------------------------------------------
-        // SEARCH BOX: FILTER THE LIST AS THE USER TYPES
-        // ---------------------------------------------------------
+
+        // FILTER THE LIST as THE USER TYPES
+
 
         etSearch.addTextChangedListener(new TextWatcher() {
 
@@ -93,7 +93,7 @@ public class AssignmentActivity extends AppCompatActivity {
             }
         });
 
-        // Keyboard "search" key just closes the keyboard
+        // Keyboard search key just closes the keyboard
         etSearch.setOnEditorActionListener((v, actionId, event) -> {
 
             if (actionId == EditorInfo.IME_ACTION_SEARCH) {
@@ -114,15 +114,15 @@ public class AssignmentActivity extends AppCompatActivity {
         loadAssignments();
     }
 
-    // =========================================================
+
     // SHOW OR HIDE THE SEARCH BOX
-    // =========================================================
+
 
     private void toggleSearchBox() {
 
         if (etSearch.getVisibility() == View.VISIBLE) {
 
-            // Close the box and go back to the full list
+            // Close the box and back to the full list
             currentQuery = "";
             etSearch.setText("");
             etSearch.setVisibility(View.GONE);
@@ -157,10 +157,9 @@ public class AssignmentActivity extends AppCompatActivity {
         }
     }
 
-    // =========================================================
-    // LOAD ASSIGNMENTS FROM DATABASE AND BUILD CARDS
-    // (ONLY THE ONES THAT MATCH THE SEARCH)
-    // =========================================================
+
+    // LOAD ASSIGNMENTS FROM DATABASE AND BUILD CARDS(obviously matching the search)
+
 
     private void loadAssignments() {
 
@@ -219,10 +218,9 @@ public class AssignmentActivity extends AppCompatActivity {
         }
     }
 
-    // =========================================================
-    // DOES THIS ASSIGNMENT MATCH WHAT THE USER TYPED?
+
     // Every word typed must appear somewhere in the card text.
-    // =========================================================
+
 
     private boolean matchesSearch(
             String courseCode,
@@ -254,9 +252,8 @@ public class AssignmentActivity extends AppCompatActivity {
         return true;
     }
 
-    // =========================================================
+
     // CREATE AND ADD ONE ASSIGNMENT CARD VIEW
-    // =========================================================
 
     private void addAssignmentCard(
             long id,
@@ -299,9 +296,9 @@ public class AssignmentActivity extends AppCompatActivity {
         llAssignmentList.addView(card);
     }
 
-    // =========================================================
-    // CONVERT STORED "yyyy-MM-dd" INTO A READABLE DATE
-    // =========================================================
+
+    // CONVERT STORED date format
+
 
     private String formatDueDate(String rawDate) {
 
@@ -323,9 +320,9 @@ public class AssignmentActivity extends AppCompatActivity {
         }
     }
 
-    // =========================================================
-    // OPEN AN ATTACHED FILE / IMAGE
-    // =========================================================
+
+    // OPEN AN ATTACHED FILE
+
 
     private void openAttachment(String uriString) {
 
@@ -349,9 +346,7 @@ public class AssignmentActivity extends AppCompatActivity {
         }
     }
 
-    // =========================================================
-    // CONFIRM AND DELETE AN ASSIGNMENT
-    // =========================================================
+    // DELETE AN ASSIGNMENT
 
     private void confirmDelete(long id) {
 

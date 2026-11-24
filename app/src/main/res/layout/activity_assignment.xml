@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Page title -->
+
 
     <TextView
         android:id="@+id/tvAssignmentTitle"
@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Search icon -->
+
 
     <TextView
         android:id="@+id/tvSearchIcon"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toTopOf="@id/tvAssignmentTitle"
         app:layout_constraintBottom_toBottomOf="@id/tvAssignmentTitle" />
 
-    <!-- Search box (hidden until the icon is tapped) -->
+
 
     <EditText
         android:id="@+id/etSearch"
@@ -58,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvAssignmentTitle" />
 
-    <!-- Empty state message -->
+
 
     <TextView
         android:id="@+id/tvNoAssignments"
@@ -74,7 +74,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="60dp" />
 
-    <!-- Scrollable list of assignment cards -->
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -97,7 +97,7 @@
 
     </ScrollView>
 
-    <!-- Floating + button -->
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnAddAssignment"
